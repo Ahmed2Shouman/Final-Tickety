@@ -1,0 +1,60 @@
+/* Container Column Styling */
+.movie {
+ /* background-color: var(--card-border); */
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover {
+    transform: translateY(-10px); /* Float on hover */
+    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.3); /* Subtle accent glow */
+}
+
+/* Card Base */
+.movie .card { 
+      
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Poster Styling */
+.movie .card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    height: 350px;
+}
+
+/* Card Body */
+.movie-info {
+    background-color: var(--card-bg);
+    padding: 1.2rem;
+    color: var(--secondary-text);
+}
+
+/* Title */
+.movie-info .card-title {
+    color: var(--primary-text);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Text Styling */
+.movie-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--secondary-text);
+}
+
+.movie-info strong {
+    color: var(--accent-color);
+}
+
+/* Short Description */
+.movie-info .small {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-top: 0.8rem;
+    line-height: 1.4;
+}

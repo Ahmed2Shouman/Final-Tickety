@@ -1,0 +1,467 @@
+:root {
+    /* Primary Colors */
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --accent-color: #00adb5;
+    --primary-text: #ffcc00;
+    --secondary-text: #b0b0b0;
+
+    /* Cards & Elements */
+    --card-bg: #1c1c1c;
+    --card-border: #2c2c2c;
+
+    /* Buttons */
+    --btn-bg: #00adb5;
+    --btn-hover: #03cdd6;
+    --btn-text: #ffffff;
+
+    /* Links */
+    --link-color: #00adb5;
+    --link-hover: #03cdd6;
+
+    /* Borders & Dividers */
+    --border-color: #333;
+    --divider-color: #444;
+
+    /* Alerts */
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+}
+
+body {
+    background-color: var(--primary-bg) !important;
+    color: var(--secondary-text) !important;
+}
+
+span {
+    color: var(--primary-text) !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: white !important;
+}
+
+tr {
+    text-align: center;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+.section-title {
+    color: var(--primary-text) !important;
+}
+
+.card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+}
+
+.card-header {
+    background: var(--primary-text) !important;
+}
+
+a {
+    color: var(--link-color) !important;
+}
+
+    
+
+td {
+    color: white;
+}
+
+.profile-box,
+.summary-section,
+.summary-section .accordion {
+    background: var(--secondary-bg) !important;
+}
+/* Styling for summary section */
+.summary-section {
+    background: var(--secondary-bg) !important;
+    color: var(--primary-text);
+    border-radius: 8px; /* Optional: Add some rounded corners for better aesthetics */
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Styling for accordion in the summary section */
+.summary-section .accordion {
+    background: var(--secondary-bg) !important;
+    color: var(--primary-text);
+    border-radius: 8px;
+}
+
+/* Styling for accordion button */
+.accordion-button {
+    background-color: var(--secondary-bg) !important; /* Dark background for accordion button */
+    color: white !important;
+}
+
+.accordion-button:hover {
+    background-color:  var(--secondary-bg) !important; /* Lighter dark background on hover */
+}
+
+.accordion-item {
+    background-color:  var(--secondary-bg)  !important; /* Dark background for accordion */
+}
+
+.accordion-body {
+    background-color:  var(--secondary-bg) ; /* Consistent dark background for the body of the accordion */
+    color: white;
+}
+
+/* user movies page */
+
+.now-showing-container {
+    background-color: var(--secondary-bg) !important;
+    color: var(--secondary-text);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.now-showing-header {
+    border-bottom: 1px solid var(--divider-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.now-showing-header h4 {
+    color: var(--primary-text);
+}
+
+.now-showing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.now-showing-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 173, 181, 0.3);
+}
+
+.now-showing-card img {
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.now-showing-card .card-body {
+    padding: 1rem;
+}
+
+.now-showing-card h5 {
+    color: var(--primary-text);
+    font-weight: 600;
+}
+
+.now-showing-card p {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-text);
+}
+
+.now-showing-card .card-description {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+/* Original button style */
+.btn {
+    background-color: var(--primary-text) !important;
+    color: black !important;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid var(--primary-text); /* Add a border using the --primary-text color */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold !important;
+    gap: 8px;
+}
+
+/* On hover state */
+.btn:hover {
+    background-color: black !important; /* Change background to --accent-color */
+    color: white !important; /* Make text black on hover */
+    font-weight: bold;
+    transform: translateY(-2px); /* Lift the button slightly */
+}
+
+/* For the outline version of the button */
+.btn-outline-warning {
+    background-color: transparent; /* Transparent background */
+    color: white !important; /* Set text color to --primary-text */
+    border: 2px solid var(--primary-text); /* Border color from --primary-text */
+}
+
+/* On hover state for outline button */
+.btn-outline-warning:hover {
+    background-color: var(
+        --accent-color
+    ); /* Change background to --accent-color */
+    color: black !important; /* Make text black */
+    font-weight: bold;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 173, 181, 0.5); /* Custom shadow color for outline button */
+}
+
+#backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 100% center; /* Start with the image aligned to the right */
+    transition: background-position 2s ease-in-out; /* Smooth transition for sliding */
+    z-index: -1; /* Ensures the background is behind the content */
+}
+
+#backgroundImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dimming overlay */
+    z-index: -1; /* Ensures overlay stays behind content */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 1; /* Ensures the hero section is above the background image */
+}
+
+/* Ensuring features section starts below the hero section */
+.features {
+    padding-top: 50px;
+}
+
+@media (max-width: 1000px) {
+    .features {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding-top: 350px;
+        padding-bottom: 10px;
+    }
+
+    .img-desc {
+        padding-top: 20px;
+    }
+
+    footer {
+        background: black;
+        background-size: 50%; /* Adjust the size to 50% of its original size */
+        color: #fff;
+
+        position: relative;
+    }
+}
+
+@media (max-width: 1024px) {
+    .features {
+        padding-top: 700px;
+        padding-bottom: 10px;
+    }
+
+    .img-desc {
+        padding-top: 20px;
+    }
+
+    footer {
+        background: black;
+        background-size: 50%; /* Adjust the size to 50% of its original size */
+        color: #fff;
+
+        position: relative;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the background image */
+    text-align: center;
+    color: white;
+    padding: 100px 20px; /* Adjust padding for better spacing */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cta-buttons a {
+    margin: 5px;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+}
+
+.navbar-brand {
+    color: var(--primary-text) !important;
+    font-size: 35px !important;
+}
+
+
+
+
+
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Set the background color, border, and shadow for the dropdown menu */
+.navbar .dropdown-menu {
+    background-color: var(--primary-bg) !important; /* Background color */
+    border: 1px solid var(--primary-text) !important; /* Border color */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.navbar .dropdown-item {
+    color: #ffffff !important;
+}
+
+/* Change the hover effect for better contrast */
+.navbar .dropdown-item:hover {
+    color: var(--primary-bg) !important; /* Hover text color */
+    background-color: var(
+        --primary-text,
+        #ffffff
+    ) !important; /* Hover background color */
+}
+
+.super-navitem {
+    font-size: 10px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.navbar .btn-outline-light {
+    display: none;
+}
+
+.navbar.scrolled .btn-outline-light {
+    display: inline-block;
+}
+
+/* Default navbar items color */
+.navbar-nav .nav-item .nav-link {
+    color: white !important;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and floating effect */
+}
+
+/* Hover effect */
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary-text) !important;
+    transform: translateY(-5px); /* Floating effect on hover */
+}
+
+/* Active link styling (optional) */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffd700; /* Gold color for active link */
+    font-weight: bold; /* Make active link bold */
+}
+
+.feature-img {
+    width: 90%;
+}
+
+footer {
+    background: black;
+    background-size: 50%; /* Adjust the size to 50% of its original size */
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+}
+
+footer .container {
+    z-index: 1; /* Ensures text is on top of the image */
+    text-align: center;
+}
+
+footer .text-muted {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-text) !important;
+}
+
+footer .social-icons {
+    margin-top: 15px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-text);
+}
+
+#backgroundCarousel {
+    height: 100vh; /* Full screen height */
+    position: relative;
+}
+
+.carousel-item {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Optional: Add a dark overlay */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}

@@ -1,0 +1,24 @@
+
+  #card-details {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+
+  #card-details.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+
+
+#card-element{
+  padding: 20px 0;
+}
+
+
+.__PrivateStripeElement{
+  font-size: 50px;
+}
